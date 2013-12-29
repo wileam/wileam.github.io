@@ -1,0 +1,134 @@
+.wrapper{
+  font-family: Verdana;
+  font-size:11px;
+  width:600px;
+  height:600px;
+  position:relative;
+  top:150px;
+  left:200px; 
+}
+.images img{
+  display:none;
+  position:absolute;
+  left:6px;
+  top:6px;
+}
+.circleBig{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:418px;
+  height:418px;
+  background:transparent url(../img/circlebg.png) no-repeat top left;
+}
+.menu{
+  position:absolute;
+  width:101px;
+  height:74px;
+  top:240px;
+  left:260px;
+  z-index:999;
+}
+a.about, a.lifeblog, a.techblog{
+  float:left;
+  clear:both;
+  height:23px;
+  margin-bottom:10px;
+  width:105px;
+  text-indent:-2000000px;
+  opacity:0.8;
+  background:transparent url(../img/menu.png) no-repeat top left;
+}
+a.lifeblog{
+  width:90px;
+  background-position:-105px 0px;
+}
+a.techblog{
+  width:88px;
+  background-position:-199px 0px;
+}
+a.about:hover, a.lifeblog:hover, a.techblog:hover{
+  opacity:1.0;
+}
+.circle{
+  margin-top:-88px;
+  margin-left:-88px;
+  width:176px;
+  height:176px;
+  position:absolute;
+  left:0;
+  top:0;
+  background:transparent url(../img/circle.png) no-repeat top left;
+  z-index:10;
+  opacity:0;
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+.description{
+  width:120px;
+  margin:40px auto;
+  text-align:center;
+}
+.description ul{
+  list-style:none;
+  text-align:center;
+}
+.description ul a,.description ul p {
+  line-height:30px;
+  font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  /*text-transform:uppercase;*/
+  font-size:14px;
+  text-shadow:1px 1px 1px #aaa; 
+}
+.description ul a:hover{
+  color:#f0f0f0;
+}
+.thumbs a img{
+  border:3px solid #f9f9f9;
+  -moz-box-shadow:1px 1px 2px #999;
+  -webkit-box-shadow:1px 1px 2px #999;
+  box-shadow:1px 1px 2px #999;
+}
+
+.social-icons {
+  /*margin-top:20px;*/
+  margin-left:15px;
+  padding: 0; 
+}
+.social-icons li {
+  float: left;
+  display: inline;
+  list-style: none;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-indent: -9999px;
+}
+.social-icons li a, a.social-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+.social-icons li:hover a {
+  background-position: 0 -38px;
+}
+
+.social-icons-color li a {
+  opacity: 0.7;
+  background-position:0 -38px !important;
+}
+
+.social-icons-color li a:hover {
+  opacity: 1;
+}
+
+.social_github {background: url(../img/icons/github.png) no-repeat;}
+.social_douban {background: url(../img/icons/douban.png) no-repeat;}
+.social_weibo {background: url(../img/icons/weibo.png) no-repeat;}
