@@ -81,6 +81,9 @@ a.about:hover, a.lifeblog:hover, a.techblog:hover{
   font-size:14px;
   text-shadow:1px 1px 1px #aaa; 
 }
+.description ul small {
+  font-size: 10px;
+}
 .description ul a:hover{
   color:#f0f0f0;
 }
