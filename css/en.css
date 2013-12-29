@@ -1,0 +1,25 @@
+a.about, a.lifeblog, a.techblog{
+  height:23px;
+  background:transparent url(../img/menu-en.png) no-repeat top left;
+}
+a.lifeblog{
+  width:90px;
+  background-position:-103px 0px;
+}
+a.techblog{
+  width:88px;
+  background-position:-193px 0px;
+}
+
+.description ul a,.description ul p {
+  line-height:22px;
+  font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  /*text-transform:uppercase;*/
+  font-size:13px;
+  text-shadow:1px 1px 1px #aaa; 
+}
+.description ul small {
+  font-size: 10px;
+}
