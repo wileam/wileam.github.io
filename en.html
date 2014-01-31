@@ -12,9 +12,9 @@
             margin:0;
             padding:0;
         }
-        body{
+        body{`
             font-family:Arial;
-            background:#a7cede url(img/bg.png) no-repeat top right;
+            background:#a7cede no-repeat top right;
         }
         .title{
             position:absolute;
@@ -24,7 +24,7 @@
             height:130px;
             background:#a7cede url(img/title-en.png) no-repeat top left;
         }
-        
+
     </style>
   <!--[if IE]>
   <style>
@@ -110,8 +110,8 @@
       <p>
         &copy; 2013, Joanna Wu.
         <a href="index.html">中文</a>
-      </p> 
-    </footer>    
+      </p>
+    </footer>
 
   </div>
   <!-- JavaScript -->
@@ -119,7 +119,7 @@
   <script type="text/javascript" src="js/jquery.path.js"></script>
   <script type="text/javascript">
     $(function() {
-        
+
         /* when page loads animate the about section by default */
         //move($('#about'),2000,2);
 
@@ -184,19 +184,23 @@
             },speed);
         }
     });
-    </script>
-    <!-- Google Analytics -->
+  </script>
+  <!-- Google Analytics -->
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-37411784-1']);
     _gaq.push(['_trackPageview']);
     (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 
     ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
 
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
+  </script>
+  <!-- console info -->
+  <script type="text/javascript">
+    window.console && window.console.info("I am looking for a front-end team to work with which has great technical environment and has an open attitude to new technologies. Located in Beijing will be the best. Thanks.\nResume：http://wileam.bitbucket.org/resume。Contact: joanna_wu@live.com . Happy New Year！！");
   </script>
 </body>
 </html>
