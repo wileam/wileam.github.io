@@ -10,7 +10,7 @@ body {
   height:600px;
   position:relative;
   top:150px;
-  left:200px; 
+  left:200px;
 }
 .images img{
   display:none;
@@ -24,7 +24,7 @@ body {
   left:0px;
   width:418px;
   height:418px;
-  background:transparent url(../img/sprite.png) no-repeat top left;
+  background:transparent url(http://wileam-file.b0.upaiyun.com/sprite.png) no-repeat top left;
   background-position: -10px -160px;
 }
 .menu{
@@ -43,7 +43,7 @@ a.about, a.lifeblog, a.techblog{
   width:105px;
   text-indent:-2000000px;
   opacity:0.8;
-  background:transparent url(../img/menu.png) no-repeat top left;
+  background:transparent url(http://wileam-file.b0.upaiyun.com/menu.png) no-repeat top left;
 }
 a.lifeblog{
   width:90px;
@@ -64,7 +64,7 @@ a.about:hover, a.lifeblog:hover, a.techblog:hover{
   position:absolute;
   left:0;
   top:0;
-  background:transparent url(../img/sprite.png) no-repeat top left;
+  background:transparent url(http://wileam-file.b0.upaiyun.com/sprite.png) no-repeat top left;
   background-position: -10px -646px;
   z-index:10;
   opacity:0;
@@ -86,7 +86,7 @@ a.about:hover, a.lifeblog:hover, a.techblog:hover{
   text-decoration:none;
   /*text-transform:uppercase;*/
   font-size:14px;
-  text-shadow:1px 1px 1px #aaa; 
+  text-shadow:1px 1px 1px #aaa;
 }
 .description ul small {
   font-size: 10px;
@@ -117,7 +117,7 @@ footer p, footer a {
 .social-icons {
   margin-top:10px;
   margin-left:15px;
-  padding: 0; 
+  padding: 0;
 }
 .social-icons li {
   float: left;
@@ -152,6 +152,6 @@ footer p, footer a {
   opacity: 1;
 }
 
-.social_github {background: url(../img/icons/github.png) no-repeat;}
-.social_douban {background: url(../img/icons/douban.png) no-repeat;}
-.social_weibo {background: url(../img/icons/weibo.png) no-repeat;}
+.social_github {background: url(http://wileam-file.b0.upaiyun.com/icons/github.png) no-repeat;}
+.social_douban {background: url(http://wileam-file.b0.upaiyun.com/icons/douban.png) no-repeat;}
+.social_weibo {background: url(http://wileam-file.b0.upaiyun.com/icons/weibo.png) no-repeat;}

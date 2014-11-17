@@ -1,6 +1,6 @@
 a.about, a.lifeblog, a.techblog{
   height:23px;
-  background:transparent url(../img/menu-en.png) no-repeat top left;
+  background:transparent url(http://wileam-file.b0.upaiyun.com/menu-en.png) no-repeat top left;
 }
 a.lifeblog{
   width:90px;
@@ -18,7 +18,7 @@ a.techblog{
   text-decoration:none;
   /*text-transform:uppercase;*/
   font-size:13px;
-  text-shadow:1px 1px 1px #aaa; 
+  text-shadow:1px 1px 1px #aaa;
 }
 .description ul small {
   font-size: 10px;
