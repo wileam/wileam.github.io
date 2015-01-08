@@ -118,7 +118,7 @@
 
     <footer>
       <p>
-        &copy; 2013, Joanna Wu.
+        &copy; 2013-<span id="J_curYear">2015</span>, Joanna Wu.
         |
         <a href="en.html">English Version</a>
         |
@@ -213,6 +213,10 @@
   </script>
   <!-- console info -->
   <script type="text/javascript">
+    $(document).ready(function() {
+      var curYear = new Date().getFullYear();
+      $('#J_curYear').html(curYear);
+    });
     window.console && window.console.log("%c", "padding:100px 160px;line-height:320px;background:url('http://wileam-file.b0.upaiyun.com/miaocoding.gif') no-repeat;");
     console.info("如需联系，可邮件: joanna_wu@live.com . Happy coding!");
   </script>
