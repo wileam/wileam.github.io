@@ -211,13 +211,16 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  <!-- console info -->
+
   <script type="text/javascript">
+    // get current year and update footer
     $(document).ready(function() {
       var curYear = new Date().getFullYear();
       $('#J_curYear').html(curYear);
     });
-    window.console && window.console.log("%c", "padding:100px 160px;line-height:320px;background:url('http://wileam-file.b0.upaiyun.com/miaocoding.gif') no-repeat;");
+
+    // console info
+    window.console && window.console.log("%c", "font-size: 1px; padding: 99px 160px; line-height: 198px;background:url('http://wileam-file.b0.upaiyun.com/miaocoding.gif') no-repeat;background-size:'320px 198px';color:transparent;");
     console.info("如需联系，可邮件: joanna_wu@live.com . Happy coding!");
   </script>
 </body>
