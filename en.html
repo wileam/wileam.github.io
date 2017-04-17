@@ -6,32 +6,56 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/en.css">
   <style>
-        *{
-          margin:0;
-          padding:0;
-        }
-        body{`
-          font-family:Arial;
-          background:#a7cede no-repeat top right;
-        }
-        .title{
-          position:absolute;
-          top:0px;
-          right:20px;
-          width:570px;
-          height:130px;
-          background:#a7cede url(http://wileam-file.b0.upaiyun.com/title-en.png) no-repeat top left;
-        }
-
-    </style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    body{`
+      font-family:Arial;
+      background:#a7cede no-repeat top right;
+    }
+    .title{
+      position:absolute;
+      top:0px;
+      right:20px;
+      width:570px;
+      height:130px;
+      background:#a7cede url(http://wileam-file.b0.upaiyun.com/title-en.png) no-repeat top left;
+    }
+  </style>
+  <!-- Start of Async Drift Code -->
+  <script>
+  !function() {
+    var t;
+    if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+    t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n;
+        return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e, n, o, i;
+      e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+      n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+    });
+  }();
+  drift.SNIPPET_VERSION = '0.3.1';
+  drift.load('6mvxkv4xu924');
+  </script>
+  <!-- End of Async Drift Code -->
+  
   <!--[if IE]>
   <style>
-                .circle{
-                    background:transparent url(images/circleIE.gif) no-repeat top left;
-                }
-                .description ul a{
-                    font-weight:normal;
-                }
+    .circle{
+      background:transparent url(images/circleIE.gif) no-repeat top left;
+    }
+    .description ul a{
+      font-weight:normal;
+    }
   </style>
   <![endif]-->
 </head>
@@ -56,7 +80,7 @@
       <div class="description">
         <ul>
           <li>
-            <p>coder, Bookworm, Traveller.</p>
+            <p>Coder, booklover, traveller.</p>
           </li>
           <li>
             <p>@wileam</p>
@@ -82,10 +106,7 @@
       <div class="description">
         <ul>
           <li>
-            <p>Life blog.</p>
-          </li>
-          <li>
-            <p><small>Powered by Hexo.</small></p>
+            <p>Everything about culture and art, reading, traveling, random thoughts...</p>
           </li>
         </ul>
       </div>
@@ -95,10 +116,7 @@
       <div class="description">
         <ul>
           <li>
-            <p>Tech blog.</p>
-          </li>
-          <li>
-            <p><small>Powered by Hexo.</small></p>
+            <p>I believe in the power of openness, communication and sharing.</p>
           </li>
         </ul>
       </div>
@@ -109,8 +127,6 @@
         &copy; 2013-<span id="J_curYear">2015</span>, Joanna Wu.
         |
         <a href="index.html">中文版</a>
-        |
-        <a href="https://www.upyun.com/">Upyun</a>
       </p>
     </footer>
 
@@ -120,72 +136,69 @@
   <script type="text/javascript" src="js/jquery.path.js"></script>
   <script type="text/javascript">
     $(function() {
-
-        /* when page loads animate the about section by default */
-        //move($('#about'),2000,2);
-
-        $('#menu > a').mouseover(
+      $('#menu > a').mouseover(
         function(){
-            var $this = $(this);
-            move($this,800,1);
+          var $this = $(this);
+          move($this,800,1);
         }
-    );
+      );
+      function move($elem,speed,turns){
+        var id = $elem.attr('id');
+        var $circle = $('#circle_'+id);
+
+        /* if hover the same one nothing happens */
+        if($circle.css('opacity')==1)
+          return;
+
+        /* change the image */
+        $('#image_'+id).stop(true,true).fadeIn(650).siblings().not(this).fadeOut(650);
 
         /*
-        function to animate / show one circle.
-        speed is the time it takes to show the circle
-        turns is the turns the circle gives around the big circle
+        if there's a circle already, then let's remove it:
+        either animate it in a circular movement or just fading out, depending on the current position of it
          */
-        function move($elem,speed,turns){
-            var id = $elem.attr('id');
-            var $circle = $('#circle_'+id);
+        $('#content .circle').each(function(i){
+          var $theCircle = $(this);
+          if($theCircle.css('opacity')==1)
+            $theCircle.stop()
+          .animate({
+            path : new $.path.arc({
+              center  : [409,359],
+              radius  : 257,
+              start   : 65,
+              end     : -110,
+              dir     : -1
+            }),
+            opacity: '0'
+          },1500);
+          else
+            $theCircle.stop()
+          .animate({opacity: '0'},200);
+        });
 
-            /* if hover the same one nothing happens */
-            if($circle.css('opacity')==1)
-                return;
+        /* make the circle appear in a circular movement */
+        var end = 65 - 360 * (turns-1);
+        $circle.stop()
+        .animate({
+          path : new $.path.arc({
+            center  : [409,359],
+            radius  : 257,
+            start   : 180,
+            end     : end,
+            dir     : -1
+          }),
+          opacity: '1'
+        },speed);
+      }
+    });
 
-            /* change the image */
-            $('#image_'+id).stop(true,true).fadeIn(650).siblings().not(this).fadeOut(650);
-
-            /*
-            if there's a circle already, then let's remove it:
-            either animate it in a circular movement or just fading out, depending on the current position of it
-             */
-            $('#content .circle').each(function(i){
-                var $theCircle = $(this);
-                if($theCircle.css('opacity')==1)
-                    $theCircle.stop()
-                .animate({
-                    path : new $.path.arc({
-                        center  : [409,359],
-                        radius  : 257,
-                        start : 65,
-                        end     : -110,
-                        dir : -1
-                    }),
-                    opacity: '0'
-                },1500);
-                else
-                    $theCircle.stop()
-                .animate({opacity: '0'},200);
-            });
-
-            /* make the circle appear in a circular movement */
-            var end = 65 - 360 * (turns-1);
-            $circle.stop()
-            .animate({
-                path : new $.path.arc({
-                    center  : [409,359],
-                    radius  : 257,
-                    start : 180,
-                    end   : end,
-                    dir   : -1
-                }),
-                opacity: '1'
-            },speed);
-        }
+    // get current year and update footer
+    $(document).ready(function() {
+      var curYear = new Date().getFullYear();
+      $('#J_curYear').html(curYear);
     });
   </script>
+  
   <!-- Google Analytics -->
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -198,19 +211,6 @@
 
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-
-  <script type="text/javascript">
-    // get current year and update footer
-    $(document).ready(function() {
-      var curYear = new Date().getFullYear();
-      $('#J_curYear').html(curYear);
-    });
-
-    // console info
-    window.console && window.console.log("%c", "font-size: 1px; padding: 99px 160px; line-height: 198px;background:url('http://wileam-file.b0.upaiyun.com/miaocoding.gif') no-repeat;background-size:'320px 198px';color:transparent;");
-    console.info("Contact: joanna_wu@live.com . Happy coding!");
-
   </script>
 </body>
 </html>
