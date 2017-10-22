@@ -22,7 +22,7 @@
   });
 
   function calcDevice() {
-    isMobile = document.documentElement.clientWidth <= 432;
+    isMobile = document.documentElement.clientWidth <= 576;
   }
   calcDevice();
   window.addEventListener('resize', calcDevice);

@@ -222,7 +222,7 @@
 	margin-top: 60px;
 }
 
-@media screen and (max-width: 45em) {
+@media screen and (max-width: 768px) {
 	.grid {
 		max-width: 500px;
 	}
@@ -252,7 +252,7 @@
 	}
 }
 
-@media screen and (max-width: 27em) {
+@media screen and (max-width: 576px) {
 	.grid {
 		margin: 0 auto 30px;
 		max-width: 320px;
