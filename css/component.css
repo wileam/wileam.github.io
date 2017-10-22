@@ -204,7 +204,7 @@
 /* Media Queries */
 /* Let's redefine the width of each anchor and the margins */
 
-@media screen and (max-width: 58em) {
+@media screen and (max-width: 1024px) {
 	.grid a {
 		width: 33.333%;
 	}
@@ -252,7 +252,7 @@
 	}
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 425px) {
 	.grid {
 		margin: 0 auto 30px;
 		max-width: 320px;

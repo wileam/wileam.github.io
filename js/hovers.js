@@ -25,7 +25,7 @@
   });
 
   function calcDevice() {
-    isMobile = document.documentElement.clientWidth <= 576;
+      isMobile = document.documentElement.clientWidth <= 425;
   }
 
   calcDevice();
