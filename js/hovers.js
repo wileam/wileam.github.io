@@ -22,8 +22,17 @@
   });
 
   function calcDevice() {
-    isMobile = document.documentElement.clientWidth <= 425;
+    var ua = navigator.userAgent;
+    if (ua.indexOf('iPhone') > -1
+      || ua.indexOf('iPad') > -1
+      || ua.indexOf('Android') > -1
+    ) {
+      isMobile = true;
+    } else {
+      isMobile = document.documentElement.clientWidth <= 425;
+    }
   }
+
   calcDevice();
   window.addEventListener('resize', calcDevice);
 })();
