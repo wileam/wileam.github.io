@@ -1,3 +1,14 @@
+.browsehappy {
+	margin: 0;
+	padding: 10px;
+	background: rgba(0,0,0,0.3);
+	text-align: center;
+}
+
+.browsehappy a {
+	text-decoration: underline;
+}
+
 /* Common style */
 .grid {
 	margin: 40px auto 120px;

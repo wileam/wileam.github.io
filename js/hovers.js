@@ -20,8 +20,12 @@
       }
     }
 
-    el.addEventListener('mouseenter', () => adjust(pathConfig.to));
-    el.addEventListener('mouseleave', () => adjust(pathConfig.from));
+    el.addEventListener('mouseenter', function() {
+      adjust(pathConfig.to)
+    });
+    el.addEventListener('mouseleave', function() {
+      adjust(pathConfig.from)
+    });
   });
 
   function calcDevice() {
