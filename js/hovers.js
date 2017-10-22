@@ -1,30 +1,29 @@
 (function() {
-  function init() {
-    if (document.documentElement.clientWidth < 400) {
-      return;
+  var isMobile = false;
+  var speed = 250;
+  var easing = mina.easeinout;
+
+  [].slice.call(document.querySelectorAll('#grid > a')).forEach(function(el) {
+    var s = Snap(el.querySelector('svg'));
+    var path = s.select('path');
+    var pathConfig = {
+      from: path.attr('d'),
+      to: el.getAttribute('data-path-hover')
+    };
+
+    function adjust(param) {
+      if (!isMobile) {
+        path.animate({ 'path': param }, speed, easing);
+      }
     }
 
-    var speed = 250,
-      easing = mina.easeinout;
+    el.addEventListener('mouseenter', () => adjust(pathConfig.to));
+    el.addEventListener('mouseleave', () => adjust(pathConfig.from));
+  });
 
-    [].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
-      var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
-        pathConfig = {
-          from : path.attr( 'd' ),
-          to : el.getAttribute( 'data-path-hover' )
-        };
-
-      el.addEventListener( 'mouseenter', function() {
-        path.animate( { 'path' : pathConfig.to }, speed, easing );
-      } );
-
-      el.addEventListener( 'mouseleave', function() {
-        path.animate( { 'path' : pathConfig.from }, speed, easing );
-      } );
-    } );
+  function calcDevice() {
+    isMobile = document.documentElement.clientWidth < 400;
   }
-
-  init();
-
-  window.addEventListener('resize', init);
+  calcDevice();
+  window.addEventListener('resize', calcDevice);
 })();
