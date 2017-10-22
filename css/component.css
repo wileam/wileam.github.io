@@ -1,7 +1,8 @@
 .browsehappy {
 	margin: 0;
 	padding: 10px;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0,0,0,.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000); /*IE8*/
 	text-align: center;
 }
 
