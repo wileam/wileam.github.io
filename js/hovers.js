@@ -1,4 +1,7 @@
 (function() {
+  if (navigator.userAgent.indexOf('iPhone') > -1) {
+    return;
+  }
   var isMobile = false;
   var speed = 250;
   var easing = mina.easeinout;
@@ -22,15 +25,7 @@
   });
 
   function calcDevice() {
-    var ua = navigator.userAgent;
-    if (ua.indexOf('iPhone') > -1
-      || ua.indexOf('iPad') > -1
-      || ua.indexOf('Android') > -1
-    ) {
-      isMobile = true;
-    } else {
-      isMobile = document.documentElement.clientWidth <= 576;
-    }
+    isMobile = document.documentElement.clientWidth <= 576;
   }
 
   calcDevice();
