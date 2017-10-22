@@ -1,5 +1,9 @@
 (function() {
   function init() {
+    if (document.documentElement.clientWidth < 400) {
+      return;
+    }
+
     var speed = 250,
       easing = mina.easeinout;
 
@@ -20,10 +24,7 @@
     } );
   }
 
-  if (document.documentElement.clientWidth < 400) {
-    return;
-  } else {
-    init();
-  }
-  
+  init();
+
+  window.addEventListener('resize', init);
 })();

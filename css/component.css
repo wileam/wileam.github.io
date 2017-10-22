@@ -196,10 +196,10 @@
 	color: #52be7f;
 }
 
-.demo-3 .grid a:hover figcaption h2 {
+/*.demo-3 .grid a:hover figcaption h2 {
 	-webkit-transform: translateY(5px);
 	transform: translateY(5px);
-}
+}*/
 
 /* Media Queries */
 /* Let's redefine the width of each anchor and the margins */
@@ -289,8 +289,8 @@
     	transform: translateY(30px);
 	}
 
-	.demo-1 .grid figure button,
-	.demo-1 .grid a:hover figure button {
+	.grid figure button,
+	.grid a:hover figure button {
 		display: none;
 	}
 

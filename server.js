@@ -1,5 +1,5 @@
 // precondition:
-// fibjs installed: http://fibjs.org/download/
+// fibjs installed: http://fibjs.org/docs/guide/install.md.html
 // $ fibjs server.js
 
 const http = require('http');
